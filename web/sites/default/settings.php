@@ -89,10 +89,10 @@
   *@endcode
  */
 $databases ['default']['default'] = [
-  'database' => 'drupal_bsas_test',
-  'username' => 'dev_bsas',
-  'password' => 'Dev_BsAs_2021_Macaco',
-  'host' => 'mariadb',
+  'database' => 'drupal8_bsas_test',
+  'username' => 'bsas_dev',
+  'password' => 'bpm9TcS9zMemPXQ',
+  'host' => '172.30.6.152',
   'port' => '3306',
   'driver' => 'mysql',
   'prefix' => '',
