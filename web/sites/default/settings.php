@@ -92,11 +92,11 @@ $databases ['default']['default'] = [
   'database' => 'drupal8_bsas_test',
   'username' => 'bsas_dev',
   'password' => 'bpm9TcS9zMemPXQ',
-  'host' => 'localhost',
+  'host' => '10.131.3.20',
   'port' => '3306',
   'driver' => 'mysql',
   'prefix' => '',
-  'collation' => 'utf8_general_ci',];
+  'collation' => 'utf8mb4_general_ci',];
 
 /**
  * Customizing database settings.
