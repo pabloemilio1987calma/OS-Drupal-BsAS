@@ -88,11 +88,11 @@
   *];
   *@endcode
  */
-$databases = ['default']['default'] = [
-  'database' => 'databasename',
+$databases ['default']['default'] = [
+  'database' => 'drupal_bsas_test',
   'username' => 'dev_bsas',
   'password' => 'Dev_BsAs_2021_Macaco',
-  'host' => 'localhost',
+  'host' => '172.30.6.152',
   'port' => '3306',
   'driver' => 'mysql',
   'prefix' => '',
