@@ -89,9 +89,9 @@
   *@endcode
  */
 $databases['default']['default'] = array (
-  'database' => 'drupal_bsas_test',
-  'username' => 'dev_bsas',
-  'password' => 'Dev_BsAs_2021_Macaco',
+  'database' => 'drupal8_bsas_test',
+  'username' => 'bsas-dev',
+  'password' => 'bpm9TcS9zMemPXQ',
   'prefix' => '',
   'host' => '172.30.6.152',
   'port' => '3306',
