@@ -90,7 +90,7 @@
  */
 $databases['default']['default'] = array (
   'database' => 'drupal8_bsas_test',
-  'username' => 'bsas-dev',
+  'username' => 'bsas_dev',
   'password' => 'bpm9TcS9zMemPXQ',
   'prefix' => '',
   'host' => '172.30.6.152',
