@@ -88,15 +88,16 @@
   *];
   *@endcode
  */
-$databases ['default']['default'] = [
+$databases['default']['default'] = array (
   'database' => 'drupal8_bsas_test',
-  'username' => 'bsas_dev',
+  'username' => 'bsas-dev',
   'password' => 'bpm9TcS9zMemPXQ',
-  'host' => '172.30.6.152',
-  'port' => '3306',
-  'driver' => 'mysql',
   'prefix' => '',
-  'collation' => 'utf8mb4_general_ci',];
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
 
 /**
  * Customizing database settings.
