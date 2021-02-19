@@ -88,16 +88,28 @@
   *];
   *@endcode
  */
-$databases['default']['default'] = array (
-  'database' => MYSQL_DATABASE, //Nombre de Base de Datos que pusimos al crear MariaDB
-  'username' => MYSQL_USER, //User que pusimos al crear MariaDB
-  'password' => MYSQL_PASSWORD, //Password que pusimos al crear MariaDB
-  'prefix' => '',
-  'host' => dbdrupal2, //URL de la DB (*ver Abajo)
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
+if (array_key_exists('OPENSHIFT_APP_NAME', $_SERVER)) {
+  $src = $_SERVER;
+} else {
+  $src = $_ENV;
+}
+$databases = array (
+  'default' => 
+  array (
+    'default' => 
+    array (
+      'database' => $src['OPENSHIFT_APP_NAME'],
+      'username' => $src['OPENSHIFT_MYSQL_DB_USERNAME'],
+      'password' => $src['OPENSHIFT_MYSQL_DB_PASSWORD'],
+      'host' => $src['OPENSHIFT_MYSQL_DB_HOST'],
+      'port' => $src['OPENSHIFT_MYSQL_DB_PORT'],
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
 );
+$conf['file_private_path'] = $src['OPENSHIFT_DATA_DIR'] . 'private/';
+$conf['file_temporary_path'] = $src['OPENSHIFT_TMP_DIR'] . 'drupal/';
 
 /**
  * Customizing database settings.
