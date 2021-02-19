@@ -98,11 +98,11 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => $src['OPENSHIFT_APP_NAME'],
-      'username' => $src['OPENSHIFT_MYSQL_DB_USERNAME'],
-      'password' => $src['OPENSHIFT_MYSQL_DB_PASSWORD'],
-      'host' => $src['OPENSHIFT_MYSQL_DB_HOST'],
-      'port' => $src['OPENSHIFT_MYSQL_DB_PORT'],
+      'database' => $src['DBDRUPAL2_MYSQL_DATABASE'], 
+      'username' => $src['DBDRUPAL2_MYSQL_USER'],
+      'password' => $src['DBDRUPAL2_MYSQL_PASSWORD'],
+      'host' => $src['DBDRUPAL2_SERVICE_HOST'],
+      'port' => $src['DBDRUPAL2_SERVICE_PORT_MARIADB'],
       'driver' => 'mysql',
       'prefix' => '',
     ),
