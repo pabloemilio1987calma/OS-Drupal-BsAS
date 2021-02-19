@@ -89,11 +89,11 @@
   *@endcode
  */
 $databases['default']['default'] = array (
-  'database' => 'drupal8_bsas_test',
-  'username' => 'bsas_dev',
-  'password' => 'bpm9TcS9zMemPXQ',
+  'database' => MYSQL_DATABASE, //Nombre de Base de Datos que pusimos al crear MariaDB
+  'username' => MYSQL_USER, //User que pusimos al crear MariaDB
+  'password' => MYSQL_PASSWORD, //Password que pusimos al crear MariaDB
   'prefix' => '',
-  'host' => '172.30.6.152',
+  'host' => dbdrupal2, //URL de la DB (*ver Abajo)
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
