@@ -88,28 +88,49 @@
   *];
   *@endcode
  */
+// if (array_key_exists('OPENSHIFT_APP_NAME', $_SERVER)) {
+//   $src = $_SERVER;
+// } else {
+//   $src = $_ENV;
+// }
+// $databases = array (
+//   'default' => 
+//   array (
+//     'default' => 
+//     array (
+//       'database' => $src['DBDRUPAL2_MYSQL_DATABASE'], 
+//       'username' => $src['DBDRUPAL2_MYSQL_USER'],
+//       'password' => $src['DBDRUPAL2_MYSQL_PASSWORD'],
+//       'host' => $src['DBDRUPAL2_SERVICE_HOST'],
+//       'port' => $src['DBDRUPAL2_SERVICE_PORT_MARIADB'],
+//       'driver' => 'mysql',
+//       'prefix' => '',
+//     ),
+//   ),
+// );
+// $conf['file_private_path'] = $src['OPENSHIFT_DATA_DIR'] . 'private/';
+// $conf['file_temporary_path'] = $src['OPENSHIFT_TMP_DIR'] . 'drupal/';
+
 if (array_key_exists('OPENSHIFT_APP_NAME', $_SERVER)) {
   $src = $_SERVER;
 } else {
   $src = $_ENV;
 }
 $databases = array (
-  'default' => 
+  'default' =>
   array (
-    'default' => 
+    'default' =>
     array (
-      'database' => $src['DBDRUPAL2_MYSQL_DATABASE'], 
-      'username' => $src['DBDRUPAL2_MYSQL_USER'],
-      'password' => $src['DBDRUPAL2_MYSQL_PASSWORD'],
-      'host' => $src['DBDRUPAL2_SERVICE_HOST'],
-      'port' => $src['DBDRUPAL2_SERVICE_PORT_MARIADB'],
+      'database' => $src['OPENSHIFT_APP_NAME'],
+      'username' => $src['OPENSHIFT_MYSQL_DB_USERNAME'],
+      'password' => $src['OPENSHIFT_MYSQL_DB_PASSWORD'],
+      'host' => $src['OPENSHIFT_MYSQL_DB_HOST'],
+      'port' => $src['OPENSHIFT_MYSQL_DB_PORT'],
       'driver' => 'mysql',
       'prefix' => '',
     ),
   ),
 );
-$conf['file_private_path'] = $src['OPENSHIFT_DATA_DIR'] . 'private/';
-$conf['file_temporary_path'] = $src['OPENSHIFT_TMP_DIR'] . 'drupal/';
 
 /**
  * Customizing database settings.
