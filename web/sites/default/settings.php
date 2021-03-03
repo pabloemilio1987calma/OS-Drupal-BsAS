@@ -111,7 +111,7 @@
 // $conf['file_private_path'] = $src['OPENSHIFT_DATA_DIR'] . 'private/';
 // $conf['file_temporary_path'] = $src['OPENSHIFT_TMP_DIR'] . 'drupal/';
 
-if (array_key_exists('OPENSHIFT_APP_NAME', $_SERVER)) {
+if (array_key_exists('DRUPAL2_MYSQL_DATABASE', $_SERVER)) {
   $src = $_SERVER;
 } else {
   $src = $_ENV;
@@ -121,11 +121,11 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => $src['OPENSHIFT_APP_NAME'],
-      'username' => $src['OPENSHIFT_MYSQL_DB_USERNAME'],
-      'password' => $src['OPENSHIFT_MYSQL_DB_PASSWORD'],
-      'host' => $src['OPENSHIFT_MYSQL_DB_HOST'],
-      'port' => $src['OPENSHIFT_MYSQL_DB_PORT'],
+      'database' => $src['DRUPAL2_MYSQL_DATABASE'],
+      'username' => $src['DRUPAL2_MYSQL_USER'],
+      'password' => $src['DRUPAL2_MYSQL_PASSWORD'],
+      'host' => $src['DRUPAL2_MYSQL_HOST'],
+      'port' => $src['DRUPAL2_MYSQL_PORT'],
       'driver' => 'mysql',
       'prefix' => '',
     ),
