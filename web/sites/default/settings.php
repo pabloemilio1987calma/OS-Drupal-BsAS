@@ -111,17 +111,27 @@
 // $conf['file_private_path'] = $src['OPENSHIFT_DATA_DIR'] . 'private/';
 // $conf['file_temporary_path'] = $src['OPENSHIFT_TMP_DIR'] . 'drupal/';
 
-$databases = ['default']['default'] = [
-  'database' => $_ENV['MYSQL_DATABASE'],
-  'username' => $_ENV['MYSQL_USER'],
-  'password' => $_ENV['MYSQL_PASSWORD'],
-  'host' => $_ENV['MARIADB1_SERVICE_HOST'],
-  'port' => $_ENV['MARIADB1_SERVICE_PORT'],
-  'driver' => 'mysql',
-  'prefix' => '',
-  'collation' => 'utf8_general_ci',];
-
-
+// if (array_key_exists('OPENSHIFT_MYSQL_DATABASE', $_SERVER)) {
+//   $src = $_SERVER;
+// } else {
+//   $src = $_ENV;
+// }
+$databases = array (
+  'default' =>
+  array (
+    'default' =>
+    array (
+      'database' => $_ENV['MYSQL_DATABASE'],
+      'username' => $_ENV['MYSQL_USER'],
+      'password' => $_ENV['MYSQL_PASSWORD'],
+      'host' => $_ENV['MARIADB1_SERVICE_HOST'],
+      'port' => $_ENV['MARIADB1_SERVICE_PORT'],
+      'driver' => 'mysql',
+      'prefix' => '',
+      'collation' => 'utf8_general_ci',
+    ),
+  ),
+);
 /**
  * Customizing database settings.
  *
