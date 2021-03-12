@@ -121,11 +121,11 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => $_ENV['MYSQL_DATABASE'],
-      'username' => $_ENV['MYSQL_USER'],
-      'password' => $_ENV['MYSQL_PASSWORD'],
-      'host' => $_SERVER['MARIADB1_SERVICE_HOST'],
-      'port' => $_SERVER['MARIADB1_SERVICE_PORT'],
+      'database' => 'mariadb1',
+      'username' => 'usuariodb1',
+      'password' => 'clavedb1',
+      'host' => '3306',
+      'port' => '172.30.103.120',
       'driver' => 'mysql',
       'prefix' => '',
       'collation' => 'utf8_general_ci',
