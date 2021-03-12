@@ -121,11 +121,11 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => 'drupaldb1',
-      'username' => 'usuariodb1',
-      'password' => 'clavedb1',
-      'host' => $_ENV['MARIADB1_SERVICE_HOST'],
-      'port' => $_ENV['MARIADB1_SERVICE_PORT'],
+      'database' => $_ENV['MYSQL_DATABASE'],
+      'username' => $_ENV['MYSQL_USER'],
+      'password' => $_ENV['MYSQL_PASSWORD'],
+      'host' => $_SERVER['MARIADB1_SERVICE_HOST'],
+      'port' => $_SERVER['MARIADB1_SERVICE_PORT'],
       'driver' => 'mysql',
       'prefix' => '',
       'collation' => 'utf8_general_ci',
