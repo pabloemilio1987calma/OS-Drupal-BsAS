@@ -128,7 +128,6 @@ $databases = array (
       'port' => $_ENV['MARIADB1_SERVICE_PORT'],
       'driver' => 'mysql',
       'prefix' => '',
-      'collation' => 'utf8_general_ci',
     ),
   ),
 );
