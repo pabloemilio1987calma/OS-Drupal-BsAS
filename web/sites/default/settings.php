@@ -124,10 +124,11 @@ $databases = array (
       'database' => $_ENV['MYSQL_DATABASE'],
       'username' => $_ENV['MYSQL_USER'],
       'password' => $_ENV['MYSQL_PASSWORD'],
-      'host' => $_ENV['MARIADB1_SERVICE_HOST'],
-      'port' => $_ENV['MARIADB1_SERVICE_PORT'],
+      'host' => $_ENV['DB_SERVICE_HOST'],
+      'port' => $_ENV['DB_SERVICE_PORT'],
       'driver' => 'mysql',
       'prefix' => '',
+      //'collation' => 'utf8_general_ci',
     ),
   ),
 );
