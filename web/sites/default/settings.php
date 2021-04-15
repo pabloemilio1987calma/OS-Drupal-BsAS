@@ -88,34 +88,6 @@
   *];
   *@endcode
  */
-// if (array_key_exists('OPENSHIFT_APP_NAME', $_SERVER)) {
-//   $src = $_SERVER;
-// } else {
-//   $src = $_ENV;
-// }
-// $databases = array (
-//   'default' => 
-//   array (
-//     'default' => 
-//     array (
-//       'database' => $src['DBDRUPAL2_MYSQL_DATABASE'], 
-//       'username' => $src['DBDRUPAL2_MYSQL_USER'],
-//       'password' => $src['DBDRUPAL2_MYSQL_PASSWORD'],
-//       'host' => $src['DBDRUPAL2_SERVICE_HOST'],
-//       'port' => $src['DBDRUPAL2_SERVICE_PORT_MARIADB'],
-//       'driver' => 'mysql',
-//       'prefix' => '',
-//     ),
-//   ),
-// );
-// $conf['file_private_path'] = $src['OPENSHIFT_DATA_DIR'] . 'private/';
-// $conf['file_temporary_path'] = $src['OPENSHIFT_TMP_DIR'] . 'drupal/';
-
-// if (array_key_exists('OPENSHIFT_MYSQL_DATABASE', $_SERVER)) {
-//   $src = $_SERVER;
-// } else {
-//   $src = $_ENV;
-// }
 $databases = array (
   'default' =>
   array (
@@ -124,8 +96,8 @@ $databases = array (
       'database' => $_ENV['MYSQL_DATABASE'],
       'username' => $_ENV['MYSQL_USER'],
       'password' => $_ENV['MYSQL_PASSWORD'],
-      'host' => $_ENV['DB_SERVICE_HOST'],
-      'port' => $_ENV['DB_SERVICE_PORT'],
+      'host' => $_ENV['MARIADB3_SERVICE_HOST'], //Línea a editar
+      'port' => $_ENV['MARIADB3_SERVICE_PORT'], //Línea a editar
       'driver' => 'mysql',
       'prefix' => '',
       //'collation' => 'utf8_general_ci',
