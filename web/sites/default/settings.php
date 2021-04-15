@@ -95,7 +95,7 @@ $databases = array (
     array (
       'database' => $_ENV['MYSQL_DATABASE'],
       'username' => $_ENV['MYSQL_USER'],
-      'password' => $_ENV['MYSQL_PASSWORD'],
+      'password' => $_ENV[''],
       'host' => $_ENV['MARIADB3_SERVICE_HOST'], //Línea a editar
       'port' => $_ENV['MARIADB3_SERVICE_PORT'], //Línea a editar
       'driver' => 'mysql',
