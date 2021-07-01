@@ -22,6 +22,8 @@
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
+        "drupal/group": "^1.4.0",
+        "druapl/subgroup": "^1.0.2",
         "drupal/radix": "^4.10",
         "drupal/telephone_validation": "^2.3",
         "drupal/token": "^1.9",
